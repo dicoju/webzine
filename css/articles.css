@@ -1,0 +1,20 @@
+.cover-bg{
+    background-image: url("../images/ia_image_2.jpg");
+}
+
+#article_passe{
+    background-image: url("../images/ia_passe.jpg");
+    background-position: bottom;
+}
+
+#article_google-home{
+    background-image: url("../images/ia_google-home.jpg");
+}
+
+#article_stromae{
+    background-image: url("../images/ia_stromae.jpeg");
+}
+
+#article_futur{
+    background-image: url("../images/ia_futur.jpg");
+}
