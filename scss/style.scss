@@ -1,0 +1,239 @@
+//FONT IMPORT
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
+//VARIABLES
+//Black
+$black-100: 	rgba(0,0,0,1);
+$black-90: 		rgba(0,0,0,0.9);
+$black-80: 		rgba(0,0,0,0.8);
+$black-70: 		rgba(0,0,0,0.7);
+$black-60: 		rgba(0,0,0,0.6);
+$black-50: 		rgba(0,0,0,0.5);
+$black-40: 		rgba(0,0,0,0.4);
+$black-30: 		rgba(0,0,0,0.3);
+$black-20: 		rgba(0,0,0,0.2);
+$black-10: 		rgba(0,0,0,0.1);
+
+//White
+$white-100: 	rgba(255,255,255,1);
+$white-90: 		rgba(255,255,255,0.9);
+$white-80: 		rgba(255,255,255,0.8);
+$white-70: 		rgba(255,255,255,0.7);
+$white-60: 		rgba(255,255,255,0.6);
+$white-50: 		rgba(255,255,255,0.5);
+$white-40: 		rgba(255,255,255,0.4);
+$white-30: 		rgba(255,255,255,0.3);
+$white-20: 		rgba(255,255,255,0.2);
+$white-10: 		rgba(255,255,255,0.1);
+
+//Invisible
+$transparent: 	rgba(255,255,255,0);
+//
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.4em;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+-webkit-font-smoothing: antialiased;
+} 
+
+h3 {
+  font-weight: 900;
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  padding-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-family: Georgia;
+  font-style: italic;
+  text-transform: none;
+  padding-bottom: 20px;
+  color: $white-60;
+}
+
+.post-info {
+  p {
+    display: inline-block;
+    margin-right: 24px;
+    color: $white-60;
+    span {
+      font-weight: 900;
+      color: $white-100;
+      padding-right: 12px;
+    }
+  }
+}
+
+.cover {
+  display: block;
+  margin: 0;
+  paddiing: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  box-shadow: 0 5px 20px $black-60;
+}
+
+.media-wrapper {
+  position: relative;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+  
+  &.cover-image {
+      overflow: hidden;
+  }
+  
+  .cover-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+  background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 120px 65% 40px 65px;
+    color: $white-100;
+    text-transform: uppercase;
+    z-index: 1;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, $transparent 0%, $black-40 47%, $black-90 100%);
+      z-index: -1;
+    }
+  }
+}
+
+.show-content {
+  position: absolute;
+  bottom: 0;
+    right: 0;
+    width: 35%;
+    padding: 40px 65px 40px 0;
+  text-align: right;
+  z-index: 1;
+  text-transform: uppercase;
+  color: $white-100;
+  cursor: pointer;
+}
+
+.content {
+  display: inline-block;
+  text-transform: none;
+  font-style: italic;
+  font-family: Georgia;
+  vertical-align: middle;
+  color: $white-60;
+}
+
+.content-icon {
+  display: inline-block;
+  width: 32px;
+  margin-left: 16px;
+  margin-top: -18px;
+  vertical-align: middle;
+  
+  &-bar {
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 18px;
+    background-color: $white-100;
+    backface-visibility: hidden;
+    
+    &.left {
+       transform: rotate(-45deg) translateY(9px);
+    }
+    
+    &.right {
+       transform: rotate(45deg) translateY(9px);
+      top: -3px;
+    }
+  }
+}
+
+.content-overlay {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black-80;
+  z-index: 2;
+  visibility: visible;
+  opacity: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  padding-top: 30vh;
+  font-size: 0;
+  max-height: 100vh;
+  overflow: auto;
+  
+  .media-wrapper {
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+}
+
+.content-item {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
+  
+  figcaption {
+    padding: 20px 35% 20px 65px;
+  }
+  
+  .post-info {
+    font-size: 12px;
+  }
+}
+
+.item-number {
+  position: absolute;
+  display: inline-block;
+  top: 20px;
+  left: 65px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  color: $white-100;
+}
