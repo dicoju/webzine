@@ -19,6 +19,14 @@
     background-image: url("../images/ia_futur.jpg");
 }
 
+#article_qezaco{
+    background-image: url("../images/kezaco.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    padding-bottom: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-size: cover;
@@ -105,6 +113,14 @@ h1 {
     font-size: 40px;
     margin-bottom: 20px;
 }
+
+.popup img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 95%;
+}
+
 .popup .close {
     position: absolute;
     top: 20px;
