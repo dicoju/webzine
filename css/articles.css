@@ -20,9 +20,9 @@
 }
 
 #article_qezaco{
-    background-image: url("../images/kezaco.png");
-    background-size: contain;
+    background-image: url("https://soyez-bien-chez-vous.ch/images/kesako.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     height: 300px;
     padding-bottom: 0;
 }
@@ -101,6 +101,7 @@ h1 {
     font-family: Arial, sans-serif;
     text-align: justify;
     position: relative;
+    font-size: 17px;
 }
 
 .popup .content-pop p{
